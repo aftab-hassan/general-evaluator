@@ -1,8 +1,12 @@
 import React from 'react';
-import styles from './Logo.module.css'
-import { Label, initializeIcons, IStyleSet, ILabelStyles} from '@fluentui/react';
-import PivotControl from './PivotControl';
-import VanillaSearchComponent from './VanillaSearchComponent';
+import logo from './logo.svg';
+import './App.css';
+import {TextField, ITextFieldStyles, Label, DefaultButton} from '@fluentui/react';
+// import OptionsCallout from './OptionsCallout';
+import Graph from './Graph';
+import PivotControl from '../PivotControl';
+// import SearchResults from './SearchResults'
+import VanillaSearchComponent from '../VanillaSearchComponent';
 import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
 
 interface IAppState {
@@ -20,15 +24,6 @@ const users = ['Aaron Nakamura-Weiser', 'Aftab Hassan', 'Alex Hoff', 'Ann Ly',
 'Narendra kumar Sampath kumar', 'Natraj Jaganmohan', 'Neeraja Abhyankar', 'Sachin Nayak', 'Sam Byrne', 'Tao Guo', 
 'Tessara Smith', 'Viswas Vanama', 'Wing Huang'];
 
-const labelStyles: Partial<IStyleSet<ILabelStyles>> = {
-  root: { 
-    fontSize: 30,
-    marginLeft: 70,
-    marginTop: 50,
-    color: 'lightslategray'
-  },
-};
-
 class App extends React.Component<{}, IAppState> {
 
   private matches: string[] = [];
@@ -42,6 +37,15 @@ class App extends React.Component<{}, IAppState> {
       isGraphVisible: true,
       textFieldValue: '',
       keyCount: 0
+    }
+  }
+
+  private textFieldStyles: Partial<ITextFieldStyles> = {
+    root: {
+      width: '500px',
+    }, 
+    fieldGroup: {
+      backgroundColor: 'aqua',
     }
   }
 
@@ -60,42 +64,32 @@ class App extends React.Component<{}, IAppState> {
   }
 
   public render() {
-    initializeIcons();
-
     return (
         <>
-          <div className={styles.App}>
-            <div className={styles.logos}> 
-              <div className={styles.cosmosLogo}>
-                <Label styles={{"root":{color:"white", fontSize: "30px"}}}>Cosmosssss</Label>
-              </div>  
-              <div className={styles.generalEvaluatorLogo}>
-                <Label styles={{"root":{color:"white", fontSize: "20px"}}}>General Evaluator</Label>
-              </div>  
-            </div>
-            <SearchBox id={'searchTextField'} onChange={this.onChangeHandler} onKeyDown={this.onKeyDownHandler} className={styles.textFieldStyles} placeholder="Search" />
+          <div className="App">
+            <div className="cosmosLogo"><Label styles={{"root":{color:"white", fontSize: "30px"}}}>Cosmos</Label></div>  
+            <div className="generalEvaluatorLogo"><Label styles={{"root":{color:"white", fontSize: "20px"}}}>General Evaluator</Label></div>  
+            <TextField autoComplete={'off'} id={'searchTextField'} onChange={this.onChangeHandler} onKeyDown={this.onKeyDownHandler} /* styles={{"root":{height: 18}}} */ className="textFieldStyles" />
+            {/* <SearchBox className="textFieldStyles" placeholder="Search" onSearch={newValue => console.log('value is ' + newValue)} /> */}
+            {/* <DefaultButton styles={{"root":{backgroundColor: '#034694'}}}>?</DefaultButton> */}
+            <div></div>
           </div>
 
-          {!this.state.isGraphVisible ? 
-            <div>
+          {!this.state.isGraphVisible ? <div /* className="vanllasearchcomponent" */>
             <VanillaSearchComponent onClickHandler={this.onClickHandlerOfSearchComponent} keyCount={this.state.keyCount} prefix={this.state.textFieldValue}/>
-            </div> : 
-          undefined}
+          </div>: undefined}
           
           {this.state.textFieldValue?.length!==0 ? (<div style={{position: "absolute", top: 80, left: 100}}>
-            <Label styles={labelStyles}>Showing feedback for {this.matches[this.state.keyCount]}</Label>
+            <Label styles={{"root":{top:"50px", fontSize: "20px", fontWeight: "300"}}}>Showing feedback for {this.matches[this.state.keyCount]}</Label>
           </div>):(<div style={{position: "absolute", top: 80, left: 100}}>
-            <Label styles={labelStyles}>Showing feedback for all speeches at Cosmos starting May 2020</Label>
+            <Label styles={{"root":{top:"50px", fontSize: "20px", fontWeight: "300"}}}>Showing feedback for all speeches at Cosmos starting May 2020</Label>
           </div>)}
-
-          {this.state.isGraphVisible ? (<div className={styles.pivotContainer}>
+          
+          {this.state.isGraphVisible ? (<div className="realParentContainer"><div className="pivotContainer">
             <PivotControl keyCount={this.state.keyCount} user={this.matches[this.state.keyCount]}/>
-          </div>):(<div className={styles.pivotContainerWithOpacity}>
+          </div></div>):(<div className="pivotContainerWithOpacity">
             <PivotControl keyCount={this.state.keyCount} user={this.matches[this.state.keyCount]}/>
           </div>)}
-          <div className={styles.ylegend}>
-              Speech number
-            </div>
         </>
         );
   }
@@ -106,6 +100,7 @@ class App extends React.Component<{}, IAppState> {
       targetElement: ev.target,
       isGraphVisible: true,
       keyCount: keyCountToSet
+      // textFieldValue: ''
     })
   }
 
@@ -135,18 +130,21 @@ class App extends React.Component<{}, IAppState> {
         showUsers: true,
         targetElement: ev.target,
         isGraphVisible: true,
+        // textFieldValue: ''
       })
     } else if(ev.key === 'ArrowUp') {
       const currentKeyCount = this.state.keyCount;
       this.setState({
         keyCount: currentKeyCount-1 >= 0 ? currentKeyCount-1 : 0
       }, ()=>{
+        // console.log(this.state.keyCount)
       })
     } else if(ev.key === 'ArrowDown') {
       const currentKeyCount = this.state.keyCount;
       this.setState({
         keyCount: currentKeyCount + 1 <= this.matches.length-1 ? currentKeyCount + 1 : this.matches.length-1
       }, () => {
+        // console.log(this.state.keyCount)
       })
     }
   }

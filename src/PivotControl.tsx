@@ -1,11 +1,11 @@
 import React from 'react';
 import { Label, ILabelStyles } from 'office-ui-fabric-react/lib/Label';
-import { Pivot, PivotItem } from 'office-ui-fabric-react/lib/Pivot';
+import { Pivot, PivotItem, IPivotStyles } from 'office-ui-fabric-react/lib/Pivot';
 import { IStyleSet } from 'office-ui-fabric-react/lib/Styling';
-import Graph from './Graph';
 import LineChart from './LineChart';
 import FeedbackNotes from './FeedbackNotes';
 import { defaultApiResponse, apiResponse, users, defaultApiResponseWhenNoUserIsSelected } from './constants';
+import styles from './Logo.module.css'
 
 interface IPivotControlProps {
   keyCount: number;
@@ -16,9 +16,12 @@ interface PivotState {
   response: any;
 }
 
-const labelStyles: Partial<IStyleSet<ILabelStyles>> = {
-    root: { marginTop: 10 },
-};  
+const pivotStyles: Partial<IStyleSet<IPivotStyles>> = {
+  link: { 
+    // width: '11vw',
+    border: '1px solid black'
+  }
+};
 
 class PivotControl extends React.Component<IPivotControlProps, PivotState> {
     constructor(props: any) {
@@ -35,11 +38,6 @@ class PivotControl extends React.Component<IPivotControlProps, PivotState> {
             '0': apiResponse[users.indexOf(this.props.user)] || defaultApiResponse
         }
       }
-      // console.log('debug');
-      // console.log('in constructor: this.props.user === ' + this.props.user);
-      // console.log('apiResponse:' + apiResponse);
-      // console.log('apiResponse[users.indexOf(this.props.user)] == ' + apiResponse[users.indexOf(this.props.user)])
-      // console.log('defaultApiResponse:' + defaultApiResponse);
     }
 
     public componentDidMount() {
@@ -162,41 +160,38 @@ class PivotControl extends React.Component<IPivotControlProps, PivotState> {
         }
 
         return (
+          // <div className="pivotcontrolstyles">
           <>
-            <Pivot aria-label="Basic Pivot Example">
-              <PivotItem
-                headerText="Convey speech idea"
-              >
-                {/* <LineChart dataPoints={this.state.response[0]} /> */}
-                <LineChart dataPoints={response[0]} />
-              </PivotItem>
-              <PivotItem headerText="Speech structure">
-                {/* <LineChart dataPoints={this.state.response[1]} /> */}
-                <LineChart dataPoints={response[1]} />
-              </PivotItem>
-              <PivotItem headerText="Vocal variety">
-                {/* <LineChart dataPoints={this.state.response[2]} /> */}
-                <LineChart dataPoints={response[2]} />
-              </PivotItem>
-              <PivotItem headerText="Hand gestures">
-                {/* <LineChart dataPoints={this.state.response[3]} /> */}
-                <LineChart dataPoints={response[3]} />
-              </PivotItem>
-              <PivotItem headerText="Controlling nerves">
-                {/* <LineChart dataPoints={this.state.response[4]} /> */}
-                <LineChart dataPoints={response[4]} />
-              </PivotItem>
-              <PivotItem headerText="Improvement Opportunities">
-                {/* <FeedbackNotes comments={this.state.response[5]}/> */}
-                <FeedbackNotes comments={response[5]}/>
-              </PivotItem>
-              <PivotItem headerText="Best parts">
-                {/* <FeedbackNotes comments={this.state.response[6]}/> */}
-                <FeedbackNotes comments={response[6]}/>
-              </PivotItem>
-            </Pivot>
+            <div className={styles.xlegend}>
+              Score
+            </div>
+            <div className={styles.pivotcontrolstyles}>
+              <Pivot styles={pivotStyles} aria-label="Graph Pivot label">
+                <PivotItem headerText="Convey speech idea">
+                  <LineChart dataPoints={response[0]} />
+                </PivotItem>
+                <PivotItem headerText="Speech structure">
+                  <LineChart dataPoints={response[1]} />
+                </PivotItem>
+                <PivotItem headerText="Vocal variety">
+                  <LineChart dataPoints={response[2]} />
+                </PivotItem>
+                <PivotItem headerText="Hand gestures">
+                  <LineChart dataPoints={response[3]} />
+                </PivotItem>
+                <PivotItem headerText="Controlling nerves">
+                  <LineChart dataPoints={response[4]} />
+                </PivotItem>
+                <PivotItem headerText="Improvement Opportunities">
+                  <FeedbackNotes comments={response[5]}/>
+                </PivotItem>
+                <PivotItem headerText="Best parts">
+                  <FeedbackNotes comments={response[6]}/>
+                </PivotItem>
+              </Pivot>
+            </div>
           </>
-          );
+        );
     }
 }
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import FeedbackNote from './FeedbackNote'
-import './App.css';
+import './Logo.module.css';
 import { Label } from '@fluentui/react';
 
 interface IFeedbackNoteProps {

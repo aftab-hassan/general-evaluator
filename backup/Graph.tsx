@@ -1,6 +1,5 @@
 import React from 'react';
-import './App.css';
-import LineChart from './LineChart';
+import LineChart from '../src/LineChart';
 
 class Graph extends React.Component {
     public render() {

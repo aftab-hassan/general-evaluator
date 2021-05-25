@@ -87,3 +87,12 @@
   left: 150px;
   width: 200px;
 }
+
+.xlegend {
+  margin-right: 10px;
+}
+
+.ylegend {
+  margin-left: 50vw;
+  margin-top: 10px;
+}
