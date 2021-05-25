@@ -1,89 +1,70 @@
-/* App */
 .App {
-  display: flex;
-  background-color: #034694;
-  gap: 200px;
-  align-items: center;
+  text-align: center;
+  margin-left: 50px;
 }
 
-/* logos */
-.logos {
-  margin-left: 200px;
-  display: flex;
-  align-items: center;
-}
-
-.cosmosLogo {
-  font-size: large;
-  color: white;
-}
-
-.generalEvaluatorLogo {
-  margin-left: 20px;
-}
-
-.textFieldStyles {
-  width: 300px;
-}
-
-.pivotContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-}
-
-.pivotcontrolstyles {
-  width: 80vw;
-}
-
-.pivotContainerWithOpacity {
-  top: 90px;
-  left: 100px;
-  position: relative;
-  opacity: 0.1;
-  width: 1300px;
+.App-logo {
+  height: 40vmin;
   pointer-events: none;
 }
 
-.fakeFocusResult {
-  width: 298px;
-  height: 30px;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.fakeFocusResult:hover {
-  background-color: #f3f2f1;
-  width: 298px;
-  height: 30px;
-}
-
-.feedbackNotesContainer {
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.feedbackNotesAndLabelOuterDiv {
-  padding-top: 20px;
+.App-link {
+  color: #61dafb;
 }
 
-.feedbackNote {
-  width: 200px;
-  border: 1px solid gray;
-  background-color: lightyellow;
-  padding: 2px;
-  text-align: left;
-  margin-right: 10px;
-  margin-top: 10px;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.fakeFocusResultWithHover {
-  background-color: #f3f2f1;
-  width: 298px;
-  height: 30px;
+.lifeevent {
+  font-size: 20px;
 }
 
-.contextualMenuDiv {
-  position: absolute;
-  left: 150px;
-  width: 200px;
+.title {
+  justify-content: center;
+  display: flex;
+  font-size: 30px;
+  margin-bottom: 50px;
+  color: darkslategrey;
+}
+
+.xAxisTitle {
+  font-size: 20px;
+  position: fixed;
+  left: 850px;
+  top: 920px;
+  color: lightslategray;
+}
+
+.yAxisTitle {
+  transform: rotate(90deg);
+  font-size: 20px;
+  position: fixed;
+  left: -20px;
+  top: 500px;
+  color: lightslategray;
+  /* font-weight:500; */
+  /* writing-mode: vertical-rl; */
 }
