@@ -13,8 +13,10 @@ import './App.css';
 const images = [
   [
     "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/orange.jpg?raw=true",
-    "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/9th.jpeg?raw=true",
-    "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/10th.jpeg?raw=true",
+    // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/9th.jpeg?raw=true",
+    // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/10th.jpeg?raw=true",
+    "https://raw.githubusercontent.com/aftab-hassan/image-share/master/9th.jpeg",
+    "https://raw.githubusercontent.com/aftab-hassan/image-share/master/10th.jpeg",
     "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/trophies.jpeg?raw=true",
     "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/trophies2.jpeg?raw=true",
     "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/headboy.jpeg?raw=true",
@@ -22,22 +24,22 @@ const images = [
   [],// Undergrad - First year
   [],// Undergrad - Following years
   ["https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/67.png?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/68.png?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/69.png?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/70.png?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/71.png?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/76.png?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/77.png?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/78.png?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/79.png?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/80.png?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/80-2.png?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/100.jpg?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/101.jpg?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/102.jpg?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/103.jpg?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/104.jpg?raw=true",
-  "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/105.jpg?raw=true"
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/68.png?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/69.png?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/70.png?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/71.png?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/76.png?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/77.png?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/78.png?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/79.png?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/80.png?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/80-2.png?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/100.jpg?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/101.jpg?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/102.jpg?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/103.jpg?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/104.jpg?raw=true",
+  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/105.jpg?raw=true"
 ],// University of Washington
   [],// University of Washington - Tailend
   ["https://github.com/aftab-hassan/challenge-conversation/blob/main/public/microsoft/IMG_0029.jpeg?raw=true"],// Starting at Microsoft
