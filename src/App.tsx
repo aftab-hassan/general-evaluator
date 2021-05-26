@@ -23,7 +23,9 @@ const images = [
   ],// School
   [],// Undergrad - First year
   [],// Undergrad - Following years
-  ["https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/67.png?raw=true",
+  [
+    "https://raw.githubusercontent.com/aftab-hassan/image-share/master/67.png"
+    // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/67.png?raw=true",
   // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/68.png?raw=true",
   // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/69.png?raw=true",
   // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/70.png?raw=true",
