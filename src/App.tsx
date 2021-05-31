@@ -1,218 +1,155 @@
-import React, {useState} from "react";
-// import "./styles.css";
+import React from 'react';
+import styles from './Logo.module.css'
+import { Label, initializeIcons, IStyleSet, ILabelStyles} from '@fluentui/react';
+import PivotControl from './PivotControl';
+import VanillaSearchComponent from './VanillaSearchComponent';
+import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
 
-import { Line } from "react-chartjs-2";
-
-import Lightbox from "react-image-lightbox";
-
-import LifeEvent from './LifeEvent';
-import LightBoxWrapper from "./LightBoxWrapper";
-
-import './App.css';
-
-const images = [
-  [
-    "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/orange.jpg?raw=true",
-    // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/9th.jpeg?raw=true",
-    // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/10th.jpeg?raw=true",
-    "https://raw.githubusercontent.com/aftab-hassan/image-share/master/9th.jpeg",
-    "https://raw.githubusercontent.com/aftab-hassan/image-share/master/10th.jpeg",
-    "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/trophies.jpeg?raw=true",
-    "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/trophies2.jpeg?raw=true",
-    "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/school/headboy.jpeg?raw=true",
-  ],// School
-  [],// Undergrad - First year
-  [],// Undergrad - Following years
-  [
-    "https://raw.githubusercontent.com/aftab-hassan/image-share/master/67.png"
-    // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/67.png?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/68.png?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/69.png?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/70.png?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/71.png?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/76.png?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/77.png?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/78.png?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/79.png?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/80.png?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/80-2.png?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/100.jpg?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/101.jpg?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/102.jpg?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/103.jpg?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/104.jpg?raw=true",
-  // "https://github.com/aftab-hassan/challenge-conversation/blob/main/public/university-of-washington/105.jpg?raw=true"
-],// University of Washington
-  [],// University of Washington - Tailend
-  ["https://github.com/aftab-hassan/challenge-conversation/blob/main/public/microsoft/IMG_0029.jpeg?raw=true"],// Starting at Microsoft
-  [],//Azure - IoT
-  []//Now
-];
-
-
-const data = {
-  labels: ["School", "Undergrad-1st year", "Undergrad-foll years", "UW", "End of UW", "Job offers", "Azure", "Now", "Now 2"],
-  datasets: [
-    {
-      label: "First dataset",
-      data: [1, -1, -0.5, 1, 0, 1, -1, 0, 0],
-      fill: false,
-      backgroundColor: "rgba(75,192,192,0.2)",
-      borderColor: "rgba(75,192,192,1)",
-      lineTension: 0.1,
-      borderCapStyle: "butt",
-      borderDash: [],
-      borderDashOffset: 0.0,
-      borderJoinStyle: "miter",
-      pointBorderColor: "rgba(75,192,192,1)",
-      pointBackgroundColor: "#fff",
-      pointBorderWidth: 5,
-      pointHoverRadius: 10,
-      pointHoverBackgroundColor: "rgba(75,192,192,1)",
-      pointHoverBorderColor: "rgba(220,220,220,1)",
-      pointHoverBorderWidth: 5,
-      pointRadius: 5,
-      pointHitRadius: 150
-    }
-  ]
-};
-
-export default function App() {
-  const [showLightBox, setShowLightBox] = useState(false);
-  const [photoIndex, setPhotoIndex] = useState(0);
-  const [clickedTooltip, setClickedTooltip] = useState(0);
-
-  function setSetShowLightBoxToFalse () {
-    setShowLightBox(false);
-  }
-
-  function getImagesArray() {
-    switch(clickedTooltip) {
-      case 0:
-        return 
-    }
-  }
-
-  const lineOptions = {
-    animation: {
-      duration: 0
-    },
-    onClick: (e, element) => {
-      if (element.length > 0) {
-        var ind = element[0]._index;
-        // alert("helo" + ind);
-        // return (
-        //   <Lightbox
-        //     mainSrc={"http://placekitten.com/4000/3000"}
-        //     onCloseRequest={() => {}}
-        //   />
-        // );
-        setClickedTooltip(ind);
-        setShowLightBox(true);
-      }
-    },
-    legend: {
-      display: false
-    },
-    tooltips: {
-      enabled: false,
-      displayColors: true
-    },
-    // pointRadius: 1,
-    // pointHitRadius: 10,
-    scales: {
-      xAxes: [
-        {
-          gridLines: {
-            display: true
-          },
-          ticks: {
-            display: false
-          }
-        },
-        // {
-        //   scaleLabel: {
-        //     display: false,
-        //     labelString: 'X text'
-        //   }
-        // }
-      ],
-      yAxes: [
-        {
-          gridLines: {
-            display: true
-          },
-          ticks: {
-            // display: false,
-          }
-        }
-      ]
-    }
-  };
-  
-  return (
-    <>
-      <div className="title">
-        My Life
-      </div>
-
-      <div className="App">
-        <Line options={lineOptions} data={data} />
-      </div>
-
-      {/* {showLightBox && <Lightbox
-        mainSrc={"http://placekitten.com/4000/3000"}
-        onCloseRequest={() => {setShowLightBox(false)}}
-      />} */}
-      
-      {showLightBox && <LightBoxWrapper
-        images={images[clickedTooltip]}
-        setSetShowLightBoxToFalse={setSetShowLightBoxToFalse}
-        // onCloseRequest={() => {setShowLightBox(false)}}
-        />}
-
-      <div style={{position: "fixed", top: 60, left: 50}}>
-        <LifeEvent title="School"/>
-      </div>
-      <div style={{position: "fixed", top: 895, left: 160}}>
-        <LifeEvent title="Undergrad - First year"/>
-      </div>
-      <div style={{position: "fixed", top: 715, left: 350}}>
-        <LifeEvent title="Undergrad - Following years"/>
-      </div>
-      <div style={{position: "fixed", top: 60, left: 500}}>
-        <LifeEvent title="University of Washington"/>
-      </div>
-      <div style={{position: "fixed", top: 505, left: 700}}>
-        <LifeEvent title="University of Washington - Tailend"/>
-      </div>
-      <div style={{position: "fixed", top: 60, left: 930}}>
-        <LifeEvent title="Starting at Microsoft"/>
-      </div>
-      <div style={{position: "fixed", top: 895, left: 1250}}>
-        <LifeEvent title="Azure - IoT"/>
-      </div>
-      <div style={{position: "fixed", top: 515, left: 1450}}>
-        <LifeEvent title="Now"/>
-      </div>
-
-      <div className="xAxisTitle">
-        {/* <LifeEvent title="Life event"/> */}
-        Life event
-      </div>
-
-      <div className="yAxisTitle">
-        {/* <span style={{marginLeft: 10}}>&#8592;</span> */}
-        Comfort level
-      </div>
-    </>
-  );
+interface IAppState {
+  showUsers: boolean;
+  targetElement: any;
+  isGraphVisible: boolean;
+  textFieldValue: string | undefined;
+  keyCount: number;
 }
 
-// useState cannot be called at the top level: duh! cuz, it has to inside a function
-// import React, {useState} from 'react'
-// const [name, setName] = useState('aftab')
+const users = ['Aaron Nakamura-Weiser', 'Aftab Hassan', 'Alex Hoff', 'Ann Ly', 
+'Bella Li', 'Betty Siewert', 'Christopher Rahla', 'Eldon L. Vincent', 'Gavin Britto', 'Grant Hsu', 
+'Hannah Jang', 'Ime Ntekpere', 'Jie (Laurie) Zhang', 'Kang Kai Chow', 'Keisuke Inomura', 'KiBeom Kwon', 
+'Kimmie Feng', 'Maciej Fronczuk', 'Margaret Tarnawa', 'Marty Varela', 'Matt Green', 'Mauricio Laine', 'Michael Umeano', 
+'Narendra kumar Sampath kumar', 'Natraj Jaganmohan', 'Neeraja Abhyankar', 'Sachin Nayak', 'Sam Byrne', 'Tao Guo', 
+'Tessara Smith', 'Viswas Vanama', 'Wing Huang'];
 
-// export default function, not export function
-// function() not function
-// props in a functional component : export default function LightBoxWrapper(props: ILightBoxWrapperProps) {
+const labelStyles: Partial<IStyleSet<ILabelStyles>> = {
+  root: { 
+    fontSize: 30,
+    marginLeft: 70,
+    marginTop: 50,
+    color: 'lightslategray'
+  },
+};
+
+class App extends React.Component<{}, IAppState> {
+
+  private matches: string[] = [];
+
+  constructor(props: any) {
+    super(props);
+
+    this.state = {
+      showUsers: false,
+      targetElement: undefined,
+      isGraphVisible: true,
+      textFieldValue: '',
+      keyCount: 0
+    }
+  }
+
+  public componentDidMount() {
+    const textField = document.getElementById('searchTextField');
+    if(textField) {
+      textField.focus();
+    }
+  }
+
+  public componentDidUpdate() {
+    const textField = document.getElementById('searchTextField');
+    if(textField) {
+      textField.focus();
+    }
+  }
+
+  public render() {
+    initializeIcons();
+
+    return (
+        <>
+          <div className={styles.App}>
+            <div className={styles.logos}> 
+              <div className={styles.cosmosLogo}>
+                <Label styles={{"root":{color:"white", fontSize: "30px"}}}>Cosmosssss</Label>
+              </div>  
+              <div className={styles.generalEvaluatorLogo}>
+                <Label styles={{"root":{color:"white", fontSize: "20px"}}}>General Evaluator</Label>
+              </div>  
+            </div>
+            <SearchBox id={'searchTextField'} onChange={this.onChangeHandler} onKeyDown={this.onKeyDownHandler} className={styles.textFieldStyles} placeholder="Search" />
+          </div>
+
+          {!this.state.isGraphVisible ? 
+            <div>
+            <VanillaSearchComponent onClickHandler={this.onClickHandlerOfSearchComponent} keyCount={this.state.keyCount} prefix={this.state.textFieldValue}/>
+            </div> : 
+          undefined}
+          
+          {this.state.textFieldValue?.length!==0 ? (<div style={{position: "absolute", top: 80, left: 100}}>
+            <Label styles={labelStyles}>Showing feedback for {this.matches[this.state.keyCount]}</Label>
+          </div>):(<div style={{position: "absolute", top: 80, left: 100}}>
+            <Label styles={labelStyles}>Showing feedback for all speeches at Cosmos starting May 2020</Label>
+          </div>)}
+
+          {this.state.isGraphVisible ? (<div className={styles.pivotContainer}>
+            <PivotControl keyCount={this.state.keyCount} user={this.matches[this.state.keyCount]}/>
+          </div>):(<div className={styles.pivotContainerWithOpacity}>
+            <PivotControl keyCount={this.state.keyCount} user={this.matches[this.state.keyCount]}/>
+          </div>)}
+          <div className={styles.ylegend}>
+              Speech number
+            </div>
+        </>
+        );
+  }
+
+  private onClickHandlerOfSearchComponent = (ev: any, keyCountToSet: number) => {
+    this.setState({
+      showUsers: true,
+      targetElement: ev.target,
+      isGraphVisible: true,
+      keyCount: keyCountToSet
+    })
+  }
+
+  private onChangeHandler = (ev: any, newValue: string | undefined) => {
+    this.setState({
+      textFieldValue: newValue,
+      targetElement: ev.target,
+      keyCount: 0,
+      isGraphVisible: newValue?.length===0?true:false
+    })
+
+    if(newValue) {
+      this.matches = [];
+
+      for(let i=0;i<users.length;i++) {
+        const user = users[i].toLowerCase();
+        if(user.indexOf(newValue) >= 0) {
+            this.matches.push(users[i]);
+        }
+      } 
+    }
+  }
+
+  private onKeyDownHandler = (ev: React.KeyboardEvent) => {
+    if(ev.key === 'Enter') {
+      this.setState({
+        showUsers: true,
+        targetElement: ev.target,
+        isGraphVisible: true,
+      })
+    } else if(ev.key === 'ArrowUp') {
+      const currentKeyCount = this.state.keyCount;
+      this.setState({
+        keyCount: currentKeyCount-1 >= 0 ? currentKeyCount-1 : 0
+      }, ()=>{
+      })
+    } else if(ev.key === 'ArrowDown') {
+      const currentKeyCount = this.state.keyCount;
+      this.setState({
+        keyCount: currentKeyCount + 1 <= this.matches.length-1 ? currentKeyCount + 1 : this.matches.length-1
+      }, () => {
+      })
+    }
+  }
+}
+
+export default App;
