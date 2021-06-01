@@ -1,11 +1,11 @@
 {
-    "range": "'Form Responses 1'!A1:N111",
+    "range": "'Form Responses 1'!A1:N114",
     "majorDimension": "ROWS",
     "values": [
       [
         "Timestamp",
         "Did the speaker accurately convey the point of the speech?",
-        "How was the structure of the speech?",
+        "How was the structure of the speech? [Row 1]",
         "How was the speaker's vocal variety?",
         "How were the speaker's hand gestures?",
         "Did the speaker appear nervous?",
@@ -13,15 +13,7 @@
         "What was the best part about the speech?"
       ],
       [
-        "9/11/2020 19:33:57",
-        "5",
-        "5",
-        "5",
-        "4",
-        "5"
-      ],
-      [
-        "9/11/2020 19:34:21",
+        "10/16/2020 19:38:43",
         "5",
         "5",
         "5",
@@ -29,82 +21,118 @@
         "5"
       ],
       [
-        "9/11/2020 19:34:23",
+        "10/16/2020 19:38:55",
         "5",
         "5",
+        "5",
         "4",
-        "4",
-        "4",
-        "Stand up and move around a bit. To simulate the in person speech",
-        "Very wise and well thought content."
+        "5"
       ],
       [
-        "9/11/2020 19:34:40",
+        "10/16/2020 19:39:00",
         "4",
-        "5",
-        "5",
-        "5",
-        "5",
-        "Conclusion felt a bit short",
-        "Really enjoy the introduction, really pull people in and visuals provided by the word of choice"
-      ],
-      [
-        "9/11/2020 19:34:44",
-        "5",
-        "4",
-        "4",
-        "5",
-        "5",
-        "What was your second point?",
-        "Using walking to clear your mind could actually entice one to do more walking. "
-      ],
-      [
-        "9/11/2020 19:34:45",
-        "5",
         "4",
         "4",
         "3",
-        "5",
-        "more movements - hand gestures",
-        "time is the answer to some problems in life -- I love this message"
+        "4"
       ],
       [
-        "9/11/2020 19:34:53",
+        "10/16/2020 19:39:14",
+        "4",
+        "4",
+        "5",
+        "5",
+        "5"
+      ],
+      [
+        "10/16/2020 19:39:23",
+        "5",
+        "5",
+        "5",
+        "4",
+        "5",
+        "Maybe stand back a bit more so we can see more of your hands.",
+        "The vocal variety and ideas of the possibilities."
+      ],
+      [
+        "10/16/2020 19:39:29",
         "5",
         "5",
         "5",
         "5",
         "4",
-        "nope ",
-        "very clear to the point."
+        "",
+        "The conclusion with science and religion converging was solid"
       ],
       [
-        "9/11/2020 19:35:26",
-        "5",
-        "5",
-        "5",
-        "5",
+        "10/16/2020 19:39:53",
         "5",
         "",
-        "Pacing and structure, as well as content shared"
+        "5",
+        "5",
+        "5",
+        "Some graphics or visual representation when discussing percentage chance to make the audience remember",
+        "I love the topic and the effect it had on your audience. Moments in your speech that  affected everyone"
       ],
       [
-        "9/11/2020 19:42:31",
+        "10/16/2020 19:39:54",
+        "5",
+        "",
+        "4",
         "5",
         "5",
-        "5",
-        "5",
-        "5"
+        "Stand up and use movement for emphasis.",
+        "Your subject of simulation was radical!"
       ],
       [
-        "9/11/2020 19:45:53",
-        "4",
-        "4",
-        "3",
-        "3",
+        "10/16/2020 19:40:08",
         "5",
-        "Maybe see if you can mix up your tones a lil bit and use your hands where you see best fit to really convey your speech with a lil more passion.",
-        "Really like your personal story shared as it made your speech very natural and interesting. "
+        "",
+        "5",
+        "5",
+        "5",
+        "Its hard to think of anything for you to improve on. It was so good. Perhaps a little more drama? ",
+        "Great topic, great expressions. I like that there was natraj behind natraj. "
+      ],
+      [
+        "10/16/2020 19:43:00",
+        "4",
+        "",
+        "4",
+        "4",
+        "4",
+        "What about engaging the audience some in your opening question?  Could you have encourage us to come off mute & answer your question?",
+        "Awesome topic, great eye contact throughout speech, used hangs well to explain topic, good research on topic, and very interesting topic that was engaging."
+      ],
+      [
+        "10/16/2020 19:48:02",
+        "5",
+        "Column 1",
+        "5",
+        "5",
+        "5",
+        "Nothing!",
+        "The research that went into it"
+      ],
+      [
+        "10/16/2020 20:04:18",
+        "5",
+        "",
+        "5",
+        "4",
+        "5",
+        "Can think of very little. Hmm, maybe, an engaging exercise with the audience, or a speech with a series of exercises and building upon the response. Just suggesting because if someone could pull it off, you definitely could. ",
+        "Forking great speech. Started off well with the reference to the 50% chance of simulation. Some good examples to connect with the audience. As someone who knows you started on the speech mid week or even later, I would've assumed you have been prepping for this speech much earlier if I hadn't known better. "
+      ],
+      [
+        "10/16/2020 20:12:53",
+        "5",
+        "Column 1",
+        "5",
+        "5",
+        "5",
+        "nothing",
+        "deep topic and convey in the way that everyone can understand."
       ]
     ]
   }

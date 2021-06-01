@@ -1,126 +1,78 @@
 {
-    "range": "'Form Responses 1'!A1:P110",
+    "range": "'Form Responses 1'!A1:J112",
     "majorDimension": "ROWS",
     "values": [
       [
         "Timestamp",
         "Did the speaker accurately convey the point of the speech?",
         "How was the structure of the speech?",
-        "How was the speaker's vocal variety?",
-        "Was the speech engaging?",
-        "How were the speaker's hand gestures?",
-        "Did the speaker appear nervous?",
-        "Comments on the transitions",
-        "What are some opportunities for improvement? ",
-        "What was the best part about the speech?"
+        "Did the speaker appear nervous?"
       ],
       [
-        "6/5/2020 19:37:17",
-        "5",
-        "5",
-        "2",
-        "4",
-        "2",
-        "5",
-        "very smooth transitions",
-        "vocal variety",
-        "structure"
-      ],
-      [
-        "6/5/2020 19:37:29",
-        "5",
-        "5",
-        "5",
-        "5",
-        "5",
-        "5",
-        "Excellent transitions from one topic to the next ",
-        "N/a",
-        "Entertaining"
-      ],
-      [
-        "6/5/2020 19:37:32",
-        "5",
-        "5",
-        "4",
-        "5",
+        "11/6/2020 19:42:28",
         "3",
-        "5",
-        "very smoothly ",
-        "",
-        "structure is very clear and easy to follow. absolutely love the ending :)"
+        "4",
+        "4"
       ],
       [
-        "6/5/2020 19:37:55",
+        "11/6/2020 19:42:28",
         "5",
-        "4",
-        "4",
-        "4",
-        "3",
         "5",
-        "very smooth",
-        "none",
-        "guinea pig is soo cute"
+        "5"
       ],
       [
-        "6/5/2020 19:38:13",
-        "5",
-        "5",
-        "5",
-        "5",
+        "11/6/2020 19:42:31",
         "4",
-        "5",
-        "Great transitions using questions and the final one showing the guinea pig",
-        "",
-        "I think it was overall excellent"
+        "4",
+        "4"
       ],
       [
-        "6/5/2020 19:38:39",
+        "11/6/2020 19:42:34",
         "5",
         "5",
-        "4",
-        "4",
-        "4",
-        "5",
-        "I like the transition since you state it with what and why so it was easy to know context was going to change",
-        "Maybe slow down a bit",
-        "The history of Thor and seeing Thor"
+        "5"
       ],
       [
-        "6/5/2020 19:39:19",
-        "5",
-        "5",
-        "5",
-        "5",
+        "11/6/2020 19:42:40",
         "4",
         "5",
-        "Transitions were well-managed. The speech flowed naturally from point to point",
-        "Speech seemed a little short. Another anecdote or more info would have been great!",
-        "Humorous beginning. Great use of vocal variety, and guest appearance from Thor!"
+        "5"
       ],
       [
-        "6/5/2020 20:00:00",
+        "11/6/2020 19:42:41",
         "4",
-        "4",
-        "4",
-        "4",
-        "3",
         "5",
-        "Smooth and experienced speech with good transitions",
-        "The background made it a lil hard to see your and your ginnypig. Not sure if that background is need all the time.",
-        "Great topic, all natural situation, and energy throughout speech"
+        "5"
       ],
       [
-        "6/6/2020 19:11:28",
+        "11/6/2020 19:42:42",
         "5",
         "5",
+        "5"
+      ],
+      [
+        "11/6/2020 19:42:48",
         "5",
         "5",
+        "5"
+      ],
+      [
+        "11/6/2020 19:42:55",
         "5",
         "5",
-        "Excellent transitions from one topic to the next ",
-        "N/a",
-        "Entertaining"
+        "4"
+      ],
+      [
+        "11/6/2020 19:43:26",
+        "5",
+        "4",
+        "5"
+      ],
+      [
+        "11/6/2020 19:43:27",
+        "5",
+        "5",
+        "5"
       ]
     ]
   }

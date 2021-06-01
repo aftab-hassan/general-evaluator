@@ -1,120 +1,142 @@
 {
-    "range": "'Form Responses 1'!A1:P110",
+    "range": "'Form Responses 1'!A1:N114",
     "majorDimension": "ROWS",
     "values": [
       [
         "Timestamp",
-        "Did the statistics grab your attention?",
         "Did the speaker accurately convey the point of the speech?",
         "How was the structure of the speech?",
-        "How was the speaker's volume variety?",
+        "How was the speaker's vocal variety?",
         "How were the speaker's hand gestures?",
         "Did the speaker appear nervous?",
-        "Do you feel you know Marty better through this speech?",
         "What are some opportunities for improvement? ",
         "What was the best part about the speech?"
       ],
       [
-        "9/11/2020 19:42:09",
-        "Yes",
-        "5",
-        "5",
-        "5",
-        "4",
-        "5",
-        "Yes"
-      ],
-      [
-        "9/11/2020 19:42:16",
-        "Yes",
-        "5",
-        "5",
-        "5",
-        "5",
-        "5",
-        "Yes"
-      ],
-      [
-        "9/11/2020 19:42:17",
-        "Yes",
+        "6/19/2020 19:43:44",
         "5",
         "4",
         "5",
         "4",
-        "5",
-        "Yes"
+        "4"
       ],
       [
-        "9/11/2020 19:42:57",
-        "Yes",
+        "6/19/2020 19:44:11",
+        "5",
+        "5",
+        "4",
+        "4",
+        "5",
+        "Slow down",
+        "Personal story"
+      ],
+      [
+        "6/19/2020 19:44:14",
         "5",
         "5",
         "5",
+        "4",
+        "5"
+      ],
+      [
+        "6/19/2020 19:44:25",
         "5",
         "5",
-        "Maybe",
+        "4",
+        "3",
+        "5",
         "",
-        "The enthusiasm and knowledge of the subject shown."
+        "I appreciate your speech very much! I gained more info about the emancipation proclamation. "
       ],
       [
-        "9/11/2020 19:43:04",
-        "Yes",
+        "6/19/2020 19:44:36",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5",
+        "Couldn't see your face :( ",
+        "Nice concise summary of historical event! "
+      ],
+      [
+        "6/19/2020 19:44:37",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5",
+        "",
+        "Information conveyed in a clear, passionate way that got your point across and got the audience's attention."
+      ],
+      [
+        "6/19/2020 19:44:49",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5",
+        "",
+        "Thanks for sharing your message, Marty. I hope Juneteenth becomes a national holiday"
+      ],
+      [
+        "6/19/2020 19:44:50",
         "5",
         "5",
         "4",
-        "4",
+        "3",
         "5",
-        "Yes",
-        "You were too far from the camera so hard to see hand gestures.",
-        "The statistics were surprising and the personal touch to the stories."
+        "Add some personal story or anecdote.",
+        "Very informative and helpful!"
       ],
       [
-        "9/11/2020 19:43:12",
-        "Yes",
+        "6/19/2020 19:44:50",
         "5",
         "4",
         "4",
         "3",
         "5",
-        "Yes",
-        "Possibly add more movements",
-        "Your reasonings were solid and clear."
+        "How more people can spread and share this knowledge",
+        "The history and importance of Juneteenth"
       ],
       [
-        "9/11/2020 19:44:03",
-        "Yes",
+        "6/19/2020 19:44:59",
+        "5",
+        "5",
         "5",
         "4",
         "5",
-        "5",
-        "5",
-        "Maybe",
-        "a bit closer to the camera ",
-        "great information, very clear. make me feel like need a mentor "
+        "",
+        "Thank you for this incredibly important speech. As always you were clear and confident. Well done, Marty!"
       ],
       [
-        "9/11/2020 19:53:55",
-        "Yes",
-        "4",
-        "4",
-        "4",
-        "4",
+        "6/19/2020 19:45:16",
         "5",
-        "Yes",
-        "keep doing great and getting better",
-        "You're going to be a Great mentor - Awesome speech. Great camera positioning and we were able to see your hands a lil bit."
+        "5",
+        "5",
+        "5",
+        "5",
+        "",
+        "Your eloquence, and Speech pace "
       ],
       [
-        "9/11/2020 20:04:53",
-        "Yes",
+        "6/19/2020 19:46:33",
         "5",
         "4",
         "5",
         "5",
         "5",
-        "Maybe",
-        "Perhaps more detail of what specifically happened in your mentorship relationship and more details of the personal growth you've had from being mentored.",
-        "I really like your personal connection to the topic. It is clear you have a passion for mentoring: good job!"
+        "I read somewhere that it takes something like 30+ sec for people to form a question, so if you were planning to ask question, perhaps mentioning that at the star would have questions ready at the end.",
+        "I really liked the good coordination between the discussion and the images in the slides."
+      ],
+      [
+        "6/19/2020 19:49:38",
+        "5",
+        "5",
+        "4",
+        "3",
+        "4",
+        "Your best improvement would be an emotional link :). You could show your face as a child, then show you now and your daughter. That would really connect with the audience. ",
+        "The visuals were clean! I liked the 3H."
       ]
     ]
   }

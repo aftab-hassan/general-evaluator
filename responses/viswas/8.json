@@ -1,5 +1,5 @@
 {
-    "range": "'Form Responses 1'!A1:N109",
+    "range": "'Form Responses 1'!A1:N107",
     "majorDimension": "ROWS",
     "values": [
       [
@@ -13,82 +13,60 @@
         "What was the best part about the speech?"
       ],
       [
-        "9/4/2020 19:47:22",
+        "4/23/2021 19:38:06",
+        "4",
+        "4",
+        "4",
         "3",
-        "3",
-        "3",
-        "3",
-        "3",
-        "topic was unclear"
+        "4"
       ],
       [
-        "9/4/2020 19:48:11",
+        "4/23/2021 19:38:14",
         "3",
-        "4",
         "3",
-        "4",
+        "2",
+        "3",
         "5",
-        "Could slow down a bit. ",
-        "Story and confidence."
+        "Personally, I was not a fan of the topic.",
+        "You seemed very knowledgable."
       ],
       [
-        "9/4/2020 19:48:36",
-        "5",
-        "5",
-        "5",
+        "4/23/2021 19:38:14",
+        "3",
+        "4",
         "4",
         "5",
-        "",
-        "I like that you gave an example from when you were a kid"
+        "5",
+        "Would be nice to go back to initial question of if bitcoin will make you rich",
+        "Simplifying the idea of bitcoin and comparison to banana economy and changing article title"
       ],
       [
-        "9/4/2020 19:48:36",
-        "3",
-        "4",
-        "4",
-        "3",
+        "4/23/2021 19:38:19",
         "5",
-        "Try to avoid political topics - they tend to be more criticized and are difficult to do successfully."
-      ],
-      [
-        "9/4/2020 19:49:04",
-        "3",
-        "3",
-        "3",
-        "3",
         "5",
-        "Add points to your speech to help the audience follow along. ",
-        "Your closing, ’Peace!’ was awesome!"
-      ],
-      [
-        "9/4/2020 19:49:11",
-        "4",
-        "3",
-        "3",
-        "3",
-        "4",
-        "The topic is a bit sensitive. Just trying to be mindful about topics like this.",
-        "Humor"
-      ],
-      [
-        "9/4/2020 21:02:59",
         "4",
         "4",
-        "3",
-        "3",
-        "4",
-        "Keep doing great & getting better!",
-        "Great way to use humor at the beginning of the speech to tie us in and keep it light before getting into the meat of the speech which was powerful"
-      ],
-      [
-        "9/5/2020 14:10:25",
-        "3",
-        "3",
-        "3",
-        "3",
         "5",
-        "Add points to your speech to help the audience follow along. ",
-        "Your closing, ’Peace!’ was awesome!"
+        "Visual aids / slides could have illustrated some points more.",
+        "You are clearly knowledgable about the subject and explained it well. You made an abstract concept easier to comprehend."
+      ],
+      [
+        "4/23/2021 19:40:29",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5"
+      ],
+      [
+        "4/23/2021 19:43:27",
+        "5",
+        "4",
+        "3",
+        "3",
+        "4",
+        "Since there was a technical aspect to your presentation, perhaps use a slide show.",
+        "I liked your analogy to changing a historical copy of the New York Times "
       ]
     ]
   }

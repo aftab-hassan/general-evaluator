@@ -1,5 +1,5 @@
 {
-    "range": "'Form Responses 1'!A1:O111",
+    "range": "'Form Responses 1'!A1:N113",
     "majorDimension": "ROWS",
     "values": [
       [
@@ -9,117 +9,118 @@
         "How was the speaker's vocal variety?",
         "How were the speaker's hand gestures?",
         "Did the speaker appear nervous?",
-        "How relevant were the questions put forth by the speaker?",
         "What are some opportunities for improvement? ",
         "What was the best part about the speech?"
       ],
       [
-        "6/5/2020 19:48:08",
-        "5",
-        "4",
-        "3",
-        "3",
+        "10/9/2020 19:40:13",
         "5",
         "5",
-        "You could insert a couple of common questions and the answers as a spur to prompt the audience.",
-        "The visuals were clear and instructive. "
+        "5",
+        "5",
+        "5"
       ],
       [
-        "6/5/2020 19:55:54",
+        "10/9/2020 19:40:26",
+        "4",
         "5",
-        "5",
-        "2",
-        "2",
-        "5",
+        "4",
+        "4",
         "4"
       ],
       [
-        "6/5/2020 19:56:32",
-        "5",
+        "10/9/2020 19:40:47",
         "4",
         "4",
         "5",
-        "4",
         "5",
-        "Eliminate some filler words.",
-        "Good visuals and explanations. "
+        "5",
+        "Maybe a summary of the entire talk at the beginning could help.",
+        "Content and confidence."
       ],
       [
-        "6/5/2020 19:56:48",
-        "4",
-        "5",
-        "4",
-        "4",
+        "10/9/2020 19:40:49",
         "5",
         "5",
-        "Maybe put more attention on the time. ",
-        "i like you conducted a Q&A and have communications with the audience. I just have one question for you: fried chicken or chemistry?! lol "
+        "4",
+        "4",
+        "5"
       ],
       [
-        "6/5/2020 19:56:54",
+        "10/9/2020 19:40:49",
         "5",
         "5",
-        "4",
-        "4",
         "5",
-        "",
-        "",
-        "The overall information it provided"
+        "5",
+        "5",
+        "Less ums, ",
+        "Seemed very comfortable and relatable, very relevent topic for al lof us"
       ],
       [
-        "6/5/2020 19:57:46",
-        "5",
-        "4",
-        "3",
-        "4",
-        "4",
-        "5",
-        "Perhaps include the kinds of problems this basic research could make solvable: like reversing/eliminating aging due to the sun or a reduction in cancers.",
-        "I really liked your enthusiasm for the topic and the details of the chemical processes involved."
-      ],
-      [
-        "6/5/2020 19:58:30",
-        "5",
-        "5",
-        "5",
-        "5",
-        "5",
-        "5",
-        "",
-        "very impress the way you answer those hard question. i'm was trying to give you the difficult one :P"
-      ],
-      [
-        "6/5/2020 20:01:04",
-        "4",
-        "4",
-        "4",
-        "3",
-        "4",
-        "4",
-        "Slides were a lil wordy",
-        "Great topic and story about how you got so interested in Chemistry when asked.  (Also, I'll email you my actual evaluation that you'd use for pathways)"
-      ],
-      [
-        "6/5/2020 20:04:26",
-        "4",
-        "5",
-        "4",
-        "4",
-        "5",
-        "5",
-        "More passion",
-        "Slides were easy to understand "
-      ],
-      [
-        "6/5/2020 20:06:49",
+        "10/9/2020 19:41:00",
         "4",
         "4",
         "3",
         "3",
+        "5",
+        "it would be helpful to go through the site step by step",
+        "very helpful "
+      ],
+      [
+        "10/9/2020 19:41:05",
+        "5",
+        "5",
+        "4",
+        "3",
+        "5",
+        "Nice to sprinkle more of your personal story into the speeches",
+        "Nice and simple slide, much needed speech"
+      ],
+      [
+        "10/9/2020 19:41:26",
+        "4",
+        "5",
         "4",
         "4",
-        "Limit the questions so speech doesn’t go too long. Set expectations early about how much time is allotted ",
-        "Dense, scientific "
+        "5",
+        "I think you could have spoken more about your experience than explaining the levels in such detail",
+        "Very informative, good structure, you asked a question to make sure we were still tracking - good strategy!\n"
+      ],
+      [
+        "10/9/2020 19:41:42",
+        "4",
+        "4",
+        "3",
+        "2",
+        "5",
+        "More vocal variation...",
+        "Your professorial delivery!"
+      ],
+      [
+        "10/9/2020 19:48:44",
+        "4",
+        "2",
+        "3",
+        "4",
+        "3",
+        "I would've liked to hear more of your personal opinions and experience than about facts about pathway!",
+        "but you did touch upon some of your experience which was very engaging."
+      ],
+      [
+        "10/9/2020 19:49:48",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5"
+      ],
+      [
+        "10/9/2020 19:50:48",
+        "5",
+        "5",
+        "5",
+        "4",
+        "3"
       ]
     ]
   }

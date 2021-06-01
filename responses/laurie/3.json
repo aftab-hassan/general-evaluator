@@ -1,5 +1,5 @@
 {
-    "range": "'Form Responses 1'!A1:N117",
+    "range": "'Form Responses 1'!A1:N115",
     "majorDimension": "ROWS",
     "values": [
       [
@@ -13,154 +13,140 @@
         "What was the best part about the speech?"
       ],
       [
-        "10/23/2020 19:34:55",
-        "5",
-        "5",
+        "1/8/2021 19:32:59",
         "4",
         "4",
-        "5"
-      ],
-      [
-        "10/23/2020 19:34:56",
-        "5",
-        "5",
-        "5",
-        "5",
-        "5",
-        "",
-        "Story and message."
-      ],
-      [
-        "10/23/2020 19:34:57",
         "4",
-        "4",
-        "5",
-        "4",
-        "5"
-      ],
-      [
-        "10/23/2020 19:34:58",
-        "5",
-        "4",
-        "3",
-        "3",
-        "5"
-      ],
-      [
-        "10/23/2020 19:35:06",
-        "5",
-        "4",
-        "5",
         "4",
         "4"
       ],
       [
-        "10/23/2020 19:35:08",
+        "1/8/2021 19:33:03",
         "5",
         "5",
         "5",
-        "4",
-        "4"
+        "5",
+        "5"
       ],
       [
-        "10/23/2020 19:35:18",
+        "1/8/2021 19:33:10",
         "5",
         "5",
         "5",
         "5",
         "5",
-        "notthing",
-        "emotional "
+        "None, awesome speech.",
+        "The introductory image."
       ],
       [
-        "10/23/2020 19:35:44",
-        "5",
-        "5",
-        "5",
-        "4",
-        "4",
-        "None, great story!",
-        "The story was awesome, not a lot of people will ever have that kind of story"
-      ],
-      [
-        "10/23/2020 19:35:48",
-        "5",
-        "4",
-        "5",
-        "3",
-        "5",
-        "Use more gestures; Include more personal aspects; How does all this shape you now.",
-        "The message and insight."
-      ],
-      [
-        "10/23/2020 19:35:49",
-        "5",
-        "5",
-        "5",
-        "5",
-        "5",
-        "Nothing I can think of!",
-        "It was a gripping story -- and you told it really well. "
-      ],
-      [
-        "10/23/2020 19:36:16",
-        "5",
-        "5",
-        "5",
-        "5",
-        "5",
-        "Not much opportunities for improvement, just some pauses if I had to say",
-        "Great speech, and you're very good at story telling and conveying emotion. Definitely grabbed your audience's attention throughout. Great structure and rarely used any filler words!"
-      ],
-      [
-        "10/23/2020 19:36:40",
-        "5",
-        "4",
-        "4",
-        "2",
-        "2",
-        "Maybe tune the grammar a little bit",
-        "I really like the ending of the speech where life is honored and cherished."
-      ],
-      [
-        "10/23/2020 19:36:49",
-        "5",
-        "4",
-        "3",
-        "4",
-        "5",
-        "Perhaps if you showed a time-line and/or map it would help place your experiences in time and space.",
-        "Interesting to hear your experience at the epicenter of a huge historic event. Thanks for sharing!"
-      ],
-      [
-        "10/23/2020 19:45:01",
-        "4",
-        "5",
-        "4",
-        "3",
-        "5",
-        "Could add some hand gestures to the speech since you stood far enough. Would consider saying the city in more english way for non chinese speakers.",
-        "Great story with a lot of visuals, which is easy to follow"
-      ],
-      [
-        "10/23/2020 19:45:27",
-        "4",
-        "4",
-        "4",
-        "3",
-        "4",
-        "Could you have engaged the audience some with a few questions?",
-        "Very heart felt story of your real life experience living in the center of the pandemic. Glad you were safe"
-      ],
-      [
-        "10/23/2020 21:21:28",
+        "1/8/2021 19:33:28",
         "5",
         "5",
         "5",
         "4",
         "5",
         "",
-        "I had to let you know you did an awesome job that i absolutely forgot i need to get myself ready for my speech. i was so into it! All experiences are treasure. You should definitely be proud of yourself. Thanks for sharing this personal and touching story!!"
+        "GTFO 2020 in Chinese"
+      ],
+      [
+        "1/8/2021 19:33:38",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5",
+        "Perhaps give more examples on each point ",
+        "Great optimistic new year speech! Inspiring! "
+      ],
+      [
+        "1/8/2021 19:33:47",
+        "5",
+        "5",
+        "4",
+        "3",
+        "5",
+        "Didn't see any hand gesture",
+        "Simple points and examples from your life."
+      ],
+      [
+        "1/8/2021 19:33:51",
+        "4",
+        "4",
+        "3",
+        "3",
+        "5",
+        "Move camera so that it shows you’re looking straight at the audience.",
+        "Optimistic message"
+      ],
+      [
+        "1/8/2021 19:33:54",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5",
+        "PPT was distracting",
+        "Structure, personal experience, positivity "
+      ],
+      [
+        "1/8/2021 19:34:25",
+        "5",
+        "4",
+        "4",
+        "3",
+        "5",
+        "Tie in chat responses. ",
+        "Chinese phrase was cool!"
+      ],
+      [
+        "1/8/2021 19:34:47",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5",
+        "",
+        "Great personal experience combined with the speech topic"
+      ],
+      [
+        "1/8/2021 19:34:51",
+        "4",
+        "4",
+        "3",
+        "2",
+        "4",
+        "It seems you were reading from something. Try memorizing a bit more and then you can use your hands an d vocal variety more.",
+        "Your message was clear and uplifting."
+      ],
+      [
+        "1/8/2021 19:35:30",
+        "5",
+        "5",
+        "5",
+        "4",
+        "5",
+        "",
+        "Simple, clear slides and message."
+      ],
+      [
+        "1/8/2021 19:35:55",
+        "5",
+        "4",
+        "5",
+        "4",
+        "5",
+        "I enjoy the mandarin, I actually caught some of it! Please speak that slower for us non natives. (2 0 2 0 aha!!)",
+        "I liked the uplifting nature of 2020 and moving teams, I wish I could do that too."
+      ],
+      [
+        "1/8/2021 19:41:42",
+        "4",
+        "4",
+        "3",
+        "3",
+        "5",
+        "When sharing your screen...What about verifying that everyone can still see you as well?",
+        "Authentic personal story of a challenging year in a lot of way - but, was highlighted by the many good things that happen for your personally. Great slides shared and interactive section at the start of your speech with your audience. Really engaging!"
       ]
     ]
   }
