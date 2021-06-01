@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Logo.module.css'
 import { Label, initializeIcons, IStyleSet, ILabelStyles} from '@fluentui/react';
-import PivotControl from './PivotControl';
 import VanillaSearchComponent from './VanillaSearchComponent';
 import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
+import { Line } from "react-chartjs-2";
 
 interface IAppState {
   showUsers: boolean;
@@ -27,6 +27,78 @@ const labelStyles: Partial<IStyleSet<ILabelStyles>> = {
     marginTop: 50,
     color: 'lightslategray'
   },
+};
+
+const data = {
+  labels: [
+    "01/01/2019",
+    "02/01/2019",
+    "03/01/2019",
+    "04/01/2019",
+    "05/01/2019",
+    "06/01/2019",
+    "07/01/2019"
+  ],
+  //backgroundColor: ['rgba(255,0,0,1)'],
+  //lineTension: 1,
+  datasets: [
+    {
+      label: "Idea",
+      fill: false,
+      borderColor: "brown",
+      borderWidth: 2,
+      pointRadius: 2,
+      data: [65, 59, 80, 81, 56, 55, 40]
+    },
+    {
+      label: "Structure",
+      fill: false,
+      borderColor: "rgba(0, 255, 0, 0.3)",
+      borderWidth: 2,
+      pointRadius: 2,
+      data: [70, 32, 45, 65, 87, 92, 99]
+    },
+    {
+      label: "Vocal",
+      fill: false,
+      borderColor: "seagreen",
+      borderWidth: 2,
+      pointRadius: 2,
+      data: [135, 91, 125, 1, 2, 3, 139]
+    },
+    {
+      label: "Gestures",
+      fill: false,
+      borderColor: "salmon",
+      borderWidth: 2,
+      pointRadius: 2,
+      data: [135, 12, 23, 12, 143, 143, 1]
+    },
+    {
+      label: "Nerves",
+      fill: false,
+      borderColor: "royalblue",
+      borderWidth: 2,
+      pointRadius: 2,
+      data: [135, 91,  143, 125, 144, 143, 139]
+    }
+  ]
+};
+
+var options = {
+  legend: {
+    position: "right",
+    labels: {
+      boxWidth: 10
+    }
+  },
+  scales: {
+    xAxes: [
+      {
+        ticks: { display: false }
+      }
+    ]
+  }
 };
 
 class App extends React.Component<{}, IAppState> {
@@ -67,7 +139,7 @@ class App extends React.Component<{}, IAppState> {
           <div className={styles.App}>
             <div className={styles.logos}> 
               <div className={styles.cosmosLogo}>
-                <Label styles={{"root":{color:"white", fontSize: "30px"}}}>Cosmosssss</Label>
+                <Label styles={{"root":{color:"white", fontSize: "30px"}}}>Cosmos</Label>
               </div>  
               <div className={styles.generalEvaluatorLogo}>
                 <Label styles={{"root":{color:"white", fontSize: "20px"}}}>General Evaluator</Label>
@@ -81,21 +153,10 @@ class App extends React.Component<{}, IAppState> {
             <VanillaSearchComponent onClickHandler={this.onClickHandlerOfSearchComponent} keyCount={this.state.keyCount} prefix={this.state.textFieldValue}/>
             </div> : 
           undefined}
-          
-          {this.state.textFieldValue?.length!==0 ? (<div style={{position: "absolute", top: 80, left: 100}}>
-            <Label styles={labelStyles}>Showing feedback for {this.matches[this.state.keyCount]}</Label>
-          </div>):(<div style={{position: "absolute", top: 80, left: 100}}>
-            <Label styles={labelStyles}>Showing feedback for all speeches at Cosmos starting May 2020</Label>
-          </div>)}
 
-          {this.state.isGraphVisible ? (<div className={styles.pivotContainer}>
-            <PivotControl keyCount={this.state.keyCount} user={this.matches[this.state.keyCount]}/>
-          </div>):(<div className={styles.pivotContainerWithOpacity}>
-            <PivotControl keyCount={this.state.keyCount} user={this.matches[this.state.keyCount]}/>
-          </div>)}
-          <div className={styles.ylegend}>
-              Speech number
-            </div>
+          <div style={{position: 'fixed', width:'80%', height: '80%', margin: 'auto'}}>
+            <Line data={data} options={options} />
+          </div>
         </>
         );
   }

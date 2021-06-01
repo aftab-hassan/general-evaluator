@@ -1,0 +1,126 @@
+{
+    "range": "'Form Responses 1'!A1:O111",
+    "majorDimension": "ROWS",
+    "values": [
+      [
+        "Timestamp",
+        "Did the speaker accurately convey the point of the speech?",
+        "How was the structure of the speech?",
+        "How was the speaker's vocal variety?",
+        "How were the speaker's hand gestures?",
+        "Did the speaker appear nervous?",
+        "How relevant were the questions put forth by the speaker?",
+        "What are some opportunities for improvement? ",
+        "What was the best part about the speech?"
+      ],
+      [
+        "6/5/2020 19:48:08",
+        "5",
+        "4",
+        "3",
+        "3",
+        "5",
+        "5",
+        "You could insert a couple of common questions and the answers as a spur to prompt the audience.",
+        "The visuals were clear and instructive. "
+      ],
+      [
+        "6/5/2020 19:55:54",
+        "5",
+        "5",
+        "2",
+        "2",
+        "5",
+        "4"
+      ],
+      [
+        "6/5/2020 19:56:32",
+        "5",
+        "4",
+        "4",
+        "5",
+        "4",
+        "5",
+        "Eliminate some filler words.",
+        "Good visuals and explanations. "
+      ],
+      [
+        "6/5/2020 19:56:48",
+        "4",
+        "5",
+        "4",
+        "4",
+        "5",
+        "5",
+        "Maybe put more attention on the time. ",
+        "i like you conducted a Q&A and have communications with the audience. I just have one question for you: fried chicken or chemistry?! lol "
+      ],
+      [
+        "6/5/2020 19:56:54",
+        "5",
+        "5",
+        "4",
+        "4",
+        "5",
+        "",
+        "",
+        "The overall information it provided"
+      ],
+      [
+        "6/5/2020 19:57:46",
+        "5",
+        "4",
+        "3",
+        "4",
+        "4",
+        "5",
+        "Perhaps include the kinds of problems this basic research could make solvable: like reversing/eliminating aging due to the sun or a reduction in cancers.",
+        "I really liked your enthusiasm for the topic and the details of the chemical processes involved."
+      ],
+      [
+        "6/5/2020 19:58:30",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5",
+        "5",
+        "",
+        "very impress the way you answer those hard question. i'm was trying to give you the difficult one :P"
+      ],
+      [
+        "6/5/2020 20:01:04",
+        "4",
+        "4",
+        "4",
+        "3",
+        "4",
+        "4",
+        "Slides were a lil wordy",
+        "Great topic and story about how you got so interested in Chemistry when asked.  (Also, I'll email you my actual evaluation that you'd use for pathways)"
+      ],
+      [
+        "6/5/2020 20:04:26",
+        "4",
+        "5",
+        "4",
+        "4",
+        "5",
+        "5",
+        "More passion",
+        "Slides were easy to understand "
+      ],
+      [
+        "6/5/2020 20:06:49",
+        "4",
+        "4",
+        "3",
+        "3",
+        "4",
+        "4",
+        "Limit the questions so speech doesn’t go too long. Set expectations early about how much time is allotted ",
+        "Dense, scientific "
+      ]
+    ]
+  }
+  
