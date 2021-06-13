@@ -1,138 +1,181 @@
 import React from 'react';
 import styles from './Logo.module.css'
-import { Label, initializeIcons, IStyleSet, ILabelStyles} from '@fluentui/react';
-import VanillaSearchComponent from './VanillaSearchComponent';
-import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
+import { Label, initializeIcons, IStyleSet, ILabelStyles, Modal, IconButton, IIconProps, IButtonStyles} from '@fluentui/react';
+import MemberDropDown from './MemberDropDown'
 import { Line } from "react-chartjs-2";
+import {  backend, users } from './constants';
+import FeedbackNotes from './FeedbackNotes';
 
 interface IAppState {
-  showUsers: boolean;
-  targetElement: any;
-  isGraphVisible: boolean;
-  textFieldValue: string | undefined;
-  keyCount: number;
+  data: any;
+  currentUserIndex: number;
+  showModal: boolean;
+  speechNumber: number;
 }
 
-const users = ['Aaron Nakamura-Weiser', 'Aftab Hassan', 'Alex Hoff', 'Ann Ly', 
-'Bella Li', 'Betty Siewert', 'Christopher Rahla', 'Eldon L. Vincent', 'Gavin Britto', 'Grant Hsu', 
-'Hannah Jang', 'Ime Ntekpere', 'Jie (Laurie) Zhang', 'Kang Kai Chow', 'Keisuke Inomura', 'KiBeom Kwon', 
-'Kimmie Feng', 'Maciej Fronczuk', 'Margaret Tarnawa', 'Marty Varela', 'Matt Green', 'Mauricio Laine', 'Michael Umeano', 
-'Narendra kumar Sampath kumar', 'Natraj Jaganmohan', 'Neeraja Abhyankar', 'Sachin Nayak', 'Sam Byrne', 'Tao Guo', 
-'Tessara Smith', 'Viswas Vanama', 'Wing Huang'];
+function getDataPoints(userIndex: number, metric: number) {
+  const memberData = backend[userIndex];
+  const metricData = (memberData as any)[metric];
+  return metricData;
+}
 
-const labelStyles: Partial<IStyleSet<ILabelStyles>> = {
-  root: { 
-    fontSize: 30,
-    marginLeft: 70,
-    marginTop: 50,
-    color: 'lightslategray'
-  },
-};
+function getComments(userIndex: number, metric: number, speechNumber: number) {
+  const memberData = backend[userIndex];
+  const speechData = (memberData as any)[metric][speechNumber];
+  return speechData;
+}
 
-const data = {
-  labels: [
-    "01/01/2019",
-    "02/01/2019",
-    "03/01/2019",
-    "04/01/2019",
-    "05/01/2019",
-    "06/01/2019",
-    "07/01/2019"
-  ],
-  //backgroundColor: ['rgba(255,0,0,1)'],
-  //lineTension: 1,
-  datasets: [
-    {
-      label: "Idea",
-      fill: false,
-      borderColor: "brown",
-      borderWidth: 2,
-      pointRadius: 2,
-      data: [65, 59, 80, 81, 56, 55, 40]
-    },
-    {
-      label: "Structure",
-      fill: false,
-      borderColor: "rgba(0, 255, 0, 0.3)",
-      borderWidth: 2,
-      pointRadius: 2,
-      data: [70, 32, 45, 65, 87, 92, 99]
-    },
-    {
-      label: "Vocal",
-      fill: false,
-      borderColor: "seagreen",
-      borderWidth: 2,
-      pointRadius: 2,
-      data: [135, 91, 125, 1, 2, 3, 139]
-    },
-    {
-      label: "Gestures",
-      fill: false,
-      borderColor: "salmon",
-      borderWidth: 2,
-      pointRadius: 2,
-      data: [135, 12, 23, 12, 143, 143, 1]
-    },
-    {
-      label: "Nerves",
-      fill: false,
-      borderColor: "royalblue",
-      borderWidth: 2,
-      pointRadius: 2,
-      data: [135, 91,  143, 125, 144, 143, 139]
-    }
-  ]
-};
-
-var options = {
-  legend: {
-    position: "right",
-    labels: {
-      boxWidth: 10
-    }
-  },
-  scales: {
-    xAxes: [
-      {
-        ticks: { display: false }
-      }
-    ]
+function getSpeechCount(userIndex: number) {
+  const memberData = backend[userIndex];
+  let speechCount = 0;
+  for(let i=0;i<6;i++) {
+    speechCount = Math.max(speechCount, (memberData as any)[i].length);
   }
-};
+
+  return speechCount;
+}
+
+function getLabels(userIndex: number) {
+  const labels = [];
+  // const memberData = backend[userIndex];
+  // let speechCount = 0;
+  // for(let i=0;i<6;i++) {
+  //   speechCount = Math.max(speechCount, (memberData as any)[i].length);
+  // }
+
+  const speechCount = getSpeechCount(userIndex);
+
+  for(let i = 0;i<speechCount;i++) {
+    labels.push("Speech " + (i+1));
+  }
+
+  return labels;
+}
 
 class App extends React.Component<{}, IAppState> {
-
-  private matches: string[] = [];
-
   constructor(props: any) {
     super(props);
 
     this.state = {
-      showUsers: false,
-      targetElement: undefined,
-      isGraphVisible: true,
-      textFieldValue: '',
-      keyCount: 0
+      data: undefined,
+      currentUserIndex: 0,
+      showModal: false,
+      speechNumber: -1
     }
   }
 
   public componentDidMount() {
-    const textField = document.getElementById('searchTextField');
-    if(textField) {
-      textField.focus();
-    }
+    
   }
 
   public componentDidUpdate() {
-    const textField = document.getElementById('searchTextField');
-    if(textField) {
-      textField.focus();
+  }
+
+  private options = {
+    legend: {
+      position: "right",
+      labels: {
+        boxWidth: 10
+      }
+    },
+    scales: {
+      xAxes: [
+        {
+          ticks: { display: false }
+        }
+      ]
+    },
+    onClick: (e: any, element: any) => {
+      if (element.length > 0) {
+        const speechNumber = element[0]._index;
+        this.setState({
+          speechNumber: speechNumber,
+          showModal: true
+        })
+      }
+    },
+  };
+
+  private cancelIcon: IIconProps = { iconName: 'Cancel' };
+
+  private iconButtonStyles: Partial<IButtonStyles> = {
+    root: {
+      // color: theme.palette.neutralPrimary,
+      marginLeft: 'auto',
+      marginTop: '4px',
+      marginRight: '2px',
+    },
+    rootHovered: {
+      // color: theme.palette.neutralDark,
+    },
+  };
+
+  private _getSelectedMember = (userSelected: any) => {
+    const userIndex = this.findUserIndex(userSelected.key);
+
+    const data = {
+      labels: getLabels(userIndex),
+      //backgroundColor: ['rgba(255,0,0,1)'],
+      //lineTension: 1,
+      datasets: [
+        {
+          label: "Idea",
+          fill: false,
+          borderColor: "brown",
+          borderWidth: 2,
+          pointRadius: 10,
+          pointHoverRadius: 11,
+          data: getDataPoints(userIndex, 0)
+        },
+        {
+          label: "Structure",
+          fill: false,
+          borderColor: "rgba(0, 255, 0, 0.3)",
+          borderWidth: 2,
+          pointRadius: 10,
+          pointHoverRadius: 11,
+          data: getDataPoints(userIndex, 1)
+        },
+        {
+          label: "Vocal",
+          fill: false,
+          borderColor: "seagreen",
+          borderWidth: 2,
+          pointRadius: 10,
+          pointHoverRadius: 11,
+          data: getDataPoints(userIndex, 2)
+        },
+        {
+          label: "Gestures",
+          fill: false,
+          borderColor: "salmon",
+          borderWidth: 2,
+          pointRadius: 10,
+          pointHoverRadius: 11,
+          data: getDataPoints(userIndex, 3)
+        },
+        {
+          label: "Nerves",
+          fill: false,
+          borderColor: "royalblue",
+          borderWidth: 2,
+          pointRadius: 10,
+          pointHoverRadius: 11,
+          data: getDataPoints(userIndex, 4)
+        }
+      ]
     }
+
+    this.setState({
+      data: data,
+      currentUserIndex: userIndex,
+    })
   }
 
   public render() {
     initializeIcons();
+
+    const speechCount = getSpeechCount(this.state.currentUserIndex);
 
     return (
         <>
@@ -142,75 +185,71 @@ class App extends React.Component<{}, IAppState> {
                 <Label styles={{"root":{color:"white", fontSize: "30px"}}}>Cosmos</Label>
               </div>  
               <div className={styles.generalEvaluatorLogo}>
-                <Label styles={{"root":{color:"white", fontSize: "20px"}}}>General Evaluator</Label>
+                <Label styles={{"root":{color:"white", fontSize: "20px"}}}>Super Evaluator</Label>
               </div>  
             </div>
-            <SearchBox id={'searchTextField'} onChange={this.onChangeHandler} onKeyDown={this.onKeyDownHandler} className={styles.textFieldStyles} placeholder="Search" />
           </div>
 
-          {!this.state.isGraphVisible ? 
-            <div>
-            <VanillaSearchComponent onClickHandler={this.onClickHandlerOfSearchComponent} keyCount={this.state.keyCount} prefix={this.state.textFieldValue}/>
-            </div> : 
-          undefined}
+          <div>
+            <MemberDropDown getSelectedMember={this._getSelectedMember} />
+          </div>
+
+          <div className={styles.showingFeedback}>
+            Showing feedback for {users[this.state.currentUserIndex]}
+            {(speechCount === 1) && 
+              <span style={{marginLeft: '20px'}}>
+                {speechCount} speech since June 2020 
+              </span>
+            }
+            {(speechCount > 1) &&
+              <span style={{marginLeft: '20px'}}>
+                {speechCount} speeches since June 2020 
+              </span>
+             }
+          </div>
 
           <div style={{position: 'fixed', width:'80%', height: '80%', margin: 'auto'}}>
-            <Line data={data} options={options} />
+            <Line data={this.state.data} options={this.options} />
           </div>
+
+          <Modal
+            // titleAriaId={titleId}
+            isOpen={this.state.showModal}
+            onDismiss={this.hideModal}
+            isBlocking={false}
+            // containerClassName={contentStyles.container}
+            // dragOptions={isDraggable ? dragOptions : undefined}
+          >
+            <div /* className={contentStyles.header} */>
+              {/* <span id={titleId}>Lorem Ipsum</span> */}
+              <IconButton
+                styles={this.iconButtonStyles}
+                iconProps={this.cancelIcon}
+                ariaLabel="Close popup modal"
+                onClick={this.hideModal}
+              />
+            </div>
+            {this.state.data && <FeedbackNotes positive={getComments(this.state.currentUserIndex, 5, this.state.speechNumber)} negative={getComments(this.state.currentUserIndex, 6, this.state.speechNumber)}/> }
+          </Modal>
         </>
         );
-  }
+    }
 
-  private onClickHandlerOfSearchComponent = (ev: any, keyCountToSet: number) => {
-    this.setState({
-      showUsers: true,
-      targetElement: ev.target,
-      isGraphVisible: true,
-      keyCount: keyCountToSet
-    })
-  }
+    private hideModal = () => {
+      this.setState({
+        showModal: false
+      })
+    }
 
-  private onChangeHandler = (ev: any, newValue: string | undefined) => {
-    this.setState({
-      textFieldValue: newValue,
-      targetElement: ev.target,
-      keyCount: 0,
-      isGraphVisible: newValue?.length===0?true:false
-    })
-
-    if(newValue) {
-      this.matches = [];
-
-      for(let i=0;i<users.length;i++) {
-        const user = users[i].toLowerCase();
-        if(user.indexOf(newValue) >= 0) {
-            this.matches.push(users[i]);
+    private findUserIndex = (userName: string) => {
+      for(let i = 0;i<users.length;i++) {
+        if(users[i] === userName) {
+          return i;
         }
-      } 
-    }
-  }
+      }
 
-  private onKeyDownHandler = (ev: React.KeyboardEvent) => {
-    if(ev.key === 'Enter') {
-      this.setState({
-        showUsers: true,
-        targetElement: ev.target,
-        isGraphVisible: true,
-      })
-    } else if(ev.key === 'ArrowUp') {
-      const currentKeyCount = this.state.keyCount;
-      this.setState({
-        keyCount: currentKeyCount-1 >= 0 ? currentKeyCount-1 : 0
-      }, ()=>{
-      })
-    } else if(ev.key === 'ArrowDown') {
-      const currentKeyCount = this.state.keyCount;
-      this.setState({
-        keyCount: currentKeyCount + 1 <= this.matches.length-1 ? currentKeyCount + 1 : this.matches.length-1
-      }, () => {
-      })
+      return 0;
     }
-  }
 }
 
 export default App;

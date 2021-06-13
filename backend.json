@@ -1,11 +1,4 @@
-export const users = ['Aaron Nakamura-Weiser', 'Aftab Hassan', 'Alex Hoff', 'Ann Ly', 
-'Bella Li', 'Betty Siewert', 'Christopher Rahla', 'Eldon L. Vincent', 'Gavin Britto', 'Grant Hsu', 
-'Hannah Jang', 'Ime Ntekpere', 'Jeff C', 'Keisuke Inomura', 'KiBeom Kwon', 'Kimmie Feng', 'Kang Kai Chow', 
-'Jie (Laurie) Zhang', 'Maciej Fronczuk', 'Margaret Tarnawa', 'Marty Varela', 'Matt Green', 'Mauricio Laine', 
-'Michael Umeano', 'Natraj Jaganmohan', 'Neeraja Abhyankar', 'Sachin Nayak', 'Sam Byrne', 
-'Tessara Smith', 'Viswas Vanama', 'Wing Huang'];
-
-export const backend  = [{
+[{
   "0": [ 4.5 ],
   "1": [ 4.7 ],
   "2": [ 4.1 ],
@@ -220,7 +213,8 @@ export const backend  = [{
       "You could've summarized at the end what the two things that you have in common with them are. I sort of lost track of which of those points was demonstrated by Mahjong and which by coping with earthquakes :)",
       "For transitions keep talking about something until the next part starts",
       "love",
-      "Perhaps give a little history of Szechwan people; was there a struggle long ago that defined their character.",      "Could you have done this speech from a certain distance to show you hand gestures and movements a lil more?"   
+      "Perhaps give a little history of Szechwan people; was there a struggle long ago that defined their character.",
+      "Could you have done this speech from a certain distance to show you hand gestures and movements a lil more?"   
     ],
     [
       "Could have added some hand gesture to the talk",

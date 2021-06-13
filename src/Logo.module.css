@@ -22,41 +22,6 @@
   margin-left: 20px;
 }
 
-.textFieldStyles {
-  width: 300px;
-}
-
-.pivotContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-}
-
-.pivotcontrolstyles {
-  width: 80vw;
-}
-
-.pivotContainerWithOpacity {
-  top: 90px;
-  left: 100px;
-  position: relative;
-  opacity: 0.1;
-  width: 1300px;
-  pointer-events: none;
-}
-
-.fakeFocusResult {
-  width: 298px;
-  height: 30px;
-}
-
-.fakeFocusResult:hover {
-  background-color: #f3f2f1;
-  width: 298px;
-  height: 30px;
-}
-
 .feedbackNotesContainer {
   display: flex;
   flex-wrap: wrap;
@@ -76,23 +41,8 @@
   margin-top: 10px;
 }
 
-.fakeFocusResultWithHover {
-  background-color: #f3f2f1;
-  width: 298px;
-  height: 30px;
-}
-
-.contextualMenuDiv {
-  position: absolute;
-  left: 150px;
-  width: 200px;
-}
-
-.xlegend {
-  margin-right: 10px;
-}
-
-.ylegend {
-  margin-left: 50vw;
-  margin-top: 10px;
+.showingFeedback {
+  /* margin-top: 20px; */
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
