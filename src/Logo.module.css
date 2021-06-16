@@ -1,25 +1,24 @@
-/* App */
-.App {
+.banner {
   display: flex;
   background-color: #034694;
-  gap: 200px;
   align-items: center;
-}
-
-/* logos */
-.logos {
-  margin-left: 200px;
-  display: flex;
-  align-items: center;
-}
-
-.cosmosLogo {
-  font-size: large;
+  /* justify-content: space-between; */
   color: white;
+  padding: 20px;
+  font-size: 20px;
 }
 
-.generalEvaluatorLogo {
-  margin-left: 20px;
+/* .footer {
+  background-color: #034694;
+  position: ;
+  padding: 20px;
+} */
+
+
+.cosmos {
+  display: flex;
+  flex: 0 1 50%;
+  font-weight: 500;
 }
 
 .feedbackNotesContainer {
@@ -49,8 +48,16 @@
   width: 90%;
 }
 
+.dropdownincenter {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .graph {
-width: 90%;
+  display: flex;
+  width: 90%;
 }
 
 .dropdowncontainer {
@@ -58,7 +65,19 @@ width: 90%;
   align-items: center;
 }
 
-
 .dropdown {
   margin-left: 10px;
+}
+
+.xAxis {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.yAxis {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
 }

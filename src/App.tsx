@@ -8,7 +8,7 @@ import FeedbackNotes from './FeedbackNotes';
 
 interface IAppState {
   data: any;
-  currentUserIndex: number;
+  currentUserIndex: number | undefined;
   showModal: boolean;
   speechNumber: number;
 }
@@ -25,7 +25,11 @@ function getComments(userIndex: number, metric: number, speechNumber: number) {
   return speechData;
 }
 
-function getSpeechCount(userIndex: number) {
+function getSpeechCount(userIndex: number | undefined) {
+  if(!userIndex) {
+    return undefined;
+  }
+
   const memberData = backend[userIndex];
   let speechCount = 0;
   for(let i=0;i<6;i++) {
@@ -44,9 +48,10 @@ function getLabels(userIndex: number) {
   // }
 
   const speechCount = getSpeechCount(userIndex);
-
-  for(let i = 0;i<speechCount;i++) {
-    labels.push("Speech " + (i+1));
+  if(speechCount) {
+    for(let i = 0;i<speechCount;i++) {
+      labels.push("Speech " + (i+1));
+    }
   }
 
   return labels;
@@ -58,7 +63,7 @@ class App extends React.Component<{}, IAppState> {
 
     this.state = {
       data: undefined,
-      currentUserIndex: 0,
+      currentUserIndex: undefined,
       showModal: false,
       speechNumber: -1
     }
@@ -179,48 +184,58 @@ class App extends React.Component<{}, IAppState> {
 
     return (
         <>
-          <div className={styles.App}>
-            <div className={styles.logos}> 
-              <div className={styles.cosmosLogo}>
-                <Label styles={{"root":{color:"white", fontSize: "30px"}}}>Cosmos</Label>
-              </div>  
-              <div className={styles.generalEvaluatorLogo}>
-                <Label styles={{"root":{color:"white", fontSize: "20px"}}}>Super Evaluator</Label>
-              </div>  
-            </div>
+          <div className={styles.banner}>
+              <div className={styles.cosmos}>
+                Cosmos
+              </div>
+              <div className={styles.superEvaluator}>
+                Super Evaluator
+              </div>
           </div>
 
-          <div className={styles.header}>
+          <div className={this.state.currentUserIndex ? styles.header : styles.dropdownincenter}>
             <div className={styles.dropdowncontainer}>
               <div>
-                Choose member
+                Select member
               </div>
               <div className={styles.dropdown}>
                 <MemberDropDown getSelectedMember={this._getSelectedMember} />
               </div>
-              <div className={styles.dropdown}>
-                and then click bubbles to see speech feedback
+              {this.state.currentUserIndex && <div className={styles.dropdown}>
+                and click bubbles below to see speech feedback
+              </div>}
+            </div>
+
+            {this.state.currentUserIndex  && speechCount &&
+              <div>
+                Showing feedback for {users[this.state.currentUserIndex]}
+                {(speechCount === 1) && 
+                  <span style={{marginLeft: '20px'}}>
+                    {speechCount} speech since June 2020 
+                  </span>
+                }
+                {(speechCount > 1) &&
+                  <span style={{marginLeft: '20px'}}>
+                    {speechCount} speeches since June 2020 
+                  </span>
+                }
               </div>
-            </div>
-
-            <div>
-              Showing feedback for {users[this.state.currentUserIndex]}
-              {(speechCount === 1) && 
-                <span style={{marginLeft: '20px'}}>
-                  {speechCount} speech since June 2020 
-                </span>
-              }
-              {(speechCount > 1) &&
-                <span style={{marginLeft: '20px'}}>
-                  {speechCount} speeches since June 2020 
-                </span>
-              }
-            </div>
+            }
           </div>
 
-          <div className={styles.graph}>
-            <Line data={this.state.data} options={this.options} />
-          </div>
+          {this.state.currentUserIndex && 
+            <>
+              <div className={styles.graph}>
+                <div className={styles.yAxis}>
+                  Points
+                </div>
+                <Line data={this.state.data} options={this.options} />
+              </div>
+              <div className={styles.xAxis}>
+                Speeches
+              </div>
+            </>
+          }
 
           <Modal
             // titleAriaId={titleId}
@@ -239,8 +254,12 @@ class App extends React.Component<{}, IAppState> {
                 onClick={this.hideModal}
               />
             </div>
-            {this.state.data && <FeedbackNotes positive={getComments(this.state.currentUserIndex, 5, this.state.speechNumber)} negative={getComments(this.state.currentUserIndex, 6, this.state.speechNumber)}/> }
+            {this.state.data && this.state.currentUserIndex && <FeedbackNotes positive={getComments(this.state.currentUserIndex, 5, this.state.speechNumber)} negative={getComments(this.state.currentUserIndex, 6, this.state.speechNumber)}/> }
           </Modal>
+
+          {/* <div className={styles.footer}>
+
+          </div> */}
         </>
         );
     }
