@@ -190,25 +190,35 @@ class App extends React.Component<{}, IAppState> {
             </div>
           </div>
 
-          <div>
-            <MemberDropDown getSelectedMember={this._getSelectedMember} />
+          <div className={styles.header}>
+            <div className={styles.dropdowncontainer}>
+              <div>
+                Choose member
+              </div>
+              <div className={styles.dropdown}>
+                <MemberDropDown getSelectedMember={this._getSelectedMember} />
+              </div>
+              <div className={styles.dropdown}>
+                and then click bubbles to see speech feedback
+              </div>
+            </div>
+
+            <div>
+              Showing feedback for {users[this.state.currentUserIndex]}
+              {(speechCount === 1) && 
+                <span style={{marginLeft: '20px'}}>
+                  {speechCount} speech since June 2020 
+                </span>
+              }
+              {(speechCount > 1) &&
+                <span style={{marginLeft: '20px'}}>
+                  {speechCount} speeches since June 2020 
+                </span>
+              }
+            </div>
           </div>
 
-          <div className={styles.showingFeedback}>
-            Showing feedback for {users[this.state.currentUserIndex]}
-            {(speechCount === 1) && 
-              <span style={{marginLeft: '20px'}}>
-                {speechCount} speech since June 2020 
-              </span>
-            }
-            {(speechCount > 1) &&
-              <span style={{marginLeft: '20px'}}>
-                {speechCount} speeches since June 2020 
-              </span>
-             }
-          </div>
-
-          <div style={{position: 'fixed', width:'80%', height: '80%', margin: 'auto'}}>
+          <div className={styles.graph}>
             <Line data={this.state.data} options={this.options} />
           </div>
 
